@@ -36,8 +36,6 @@ $(function () {
     
       cityChosen.textContent = data.location.name;
       
-    
-
     // Input date in the format "YYYY-MM-DD"
     let inputDate = data.location.localtime;
 

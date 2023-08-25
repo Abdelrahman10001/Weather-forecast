@@ -13,7 +13,7 @@ $(function () {
 
 
 
-  $(".cube").hide()
+  // $(".cube").hide()
 
   // Function to fetch data from the API
   async function fetchData(cityName) {

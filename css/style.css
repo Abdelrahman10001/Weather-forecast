@@ -1,0 +1,295 @@
+:root {
+  --main-color: #BFC1C8
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: #1E202B;
+}
+
+.logo-type {
+  font-size: 12px;
+}
+
+
+h1 {
+  font-size: 19px;
+}
+
+small {
+  color: #bfc1c8;
+}
+
+.navbar-nav,
+.nav-link {
+  color: white;
+}
+
+.nav-logo {
+  width: 5.7rem;
+}
+
+.navbar-nav .nav-link.active {
+  border: #009AD8 2px solid;
+  border-radius: 1.5em;
+  color: #009AD8;
+}
+
+
+.nav-link.active:hover {
+  color: #009AD8;
+}
+
+.nav-link:hover {
+  border: #009AD8 2px solid;
+  border-radius: 1.5em;
+  color: #009AD8;
+}
+
+/* header  */
+
+
+header {
+  min-height: 350px;
+  background-image: url(../images/banner.png);
+
+}
+
+.forcast-Cubs {
+  margin-top: -150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search .form-control {
+  background-color: #1E202B;
+  border-radius: 30px;
+  border: transparent;
+}
+
+.search .form-control {
+  color: white;
+}
+
+.search .form-control:hover {
+  box-shadow: none;
+  background-color: #1E202B;
+  border: transparent;
+}
+
+.search .form-control:focus {
+  background-color: #1E202B;
+  box-shadow: none;
+  border: transparent;
+}
+
+form {
+  position: relative;
+}
+
+#searchCon {
+  border-radius: 30px;
+  background-color: #009AD8;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.btnn {
+  border-radius: 30px;
+  background-color: #009AD8;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+
+.search .form-control::placeholder {
+  color: #707071;
+}
+
+/* Start Weather Table */
+
+.forcast-Header {
+  background-color: #2D303D;
+}
+
+.forcast-Content {
+  background-color: #323544;
+}
+
+
+.status {
+  color: #09c;
+}
+
+.statWeather {
+  color: #09c;
+}
+
+
+
+
+
+.cube {
+  /* max-height: 315px; */
+
+  color: var(--main-color);
+}
+
+
+
+.middlediv .forcast-Header {
+  background-color: #222530;
+}
+
+.middlediv .forcast-Content {
+  background-color: #262936
+}
+
+.celNum h2 {
+  font-size: 6.5rem;
+}
+
+#day3degree,
+#day2degree {
+  font-size: 4rem;
+}
+
+#weatherCubs {
+  background: #1E202B;
+}
+
+footer {
+  background-color: #262936;
+}
+
+.forcast-Header p,
+span {
+  font-size: 15px;
+}
+
+.forcast-Content h5 {
+  font-size: 19px;
+}
+
+.forcast-Content h2 {
+  font-weight: 700;
+}
+
+.media {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(30, 32, 43);
+}
+
+.media:hover {
+  color: white;
+  background-color: #009AD8
+}
+
+footer p {
+  color: var(--main-color);
+}
+
+
+/* Contact Page */
+
+.content {
+  background-color: #1E202B;
+}
+
+.breadcrumb {
+  border-radius: 30px;
+  font-size: 15px;
+  background-color: #262936;
+}
+
+.breadcrumb a {
+  color: #B1C1C8;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+/* map */
+
+.contact-info {
+  background-color: #262936;
+  border-radius: 10px;
+  max-height: 360px;
+}
+
+.map {
+  height: 220px;
+}
+
+.mapcontent a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* Form */
+
+.contact-us p {
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+.btnsubmet {
+  right: 0;
+  bottom: -26px;
+  color: white;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: rgb(0, 154, 216);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+
+input,
+textarea {
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+  border: 2px solid #393c48;
+  background: transparent;
+  border-radius: 30px;
+}
+
+input:hover,
+textarea:hover {
+  border-color: rgb(0, 154, 216);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(0, 154, 216);
+}
+
+input:active,
+textarea:active {
+  border-color: rgb(0, 154, 216);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cairo:wght@300;400;500;600;700;800;900;1000&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Oswald&family=Pacifico&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather 2.1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg p-4">
+        <div class="container">
+            <a class="navbar-brand row flex-nowrap col-2 " href="#">
+                <img src="images/logo.png" class="nav-logo p-1" alt="">
+                <div class="logo-type">
+                    <h1 class="siteTitle fw-bold text-white ">Company Name</h1>
+                    <small>tagline goes here</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item pe-md-4 ">
+                        <a class="nav-link active " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item pe-md-4">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item pe-md-4">
+                        <a class="nav-link" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item pe-md-4">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item pe-md-4">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Start header -->
+    <header class="pt-5">
+        <div class="container">
+            <form action="" class="search">
+                <input type="text" id="city" placeholder="Put your location..." class="form-control p-3   ">
+                <button type="button" id="searchCon" class=" text-white px-4 py-2 ">Find</button>
+
+            </form>
+        </div>
+    </header>
+    <!-- Start Weather table -->
+    <section id="weatherCubs" class="py-4">
+        <div class="container ">
+            <div class="row g-0 forcast-Cubs   ">
+                <div class=" col-lg-4   " id="today">
+                    <div class=" cube mb-0 mb-sm-4">
+                        <div class="forcast-Header d-flex justify-content-between flex-nowrap px-3 py-1 ">
+                            <p id="WeekDay">The Day Choosen</p>
+                            <p id="exactDay">The Date Choosen</p>
+                        </div>
+                        <div class="forcast-Content p-4">
+                            <h5 id="cityChosen">The City Choosen</h5>
+                            <div class="degree">
+                                <div class="celsius my-3 d-flex">
+                                    <div class="celNum">
+                                        <h2 class="text-white currentDeg">24c</h2>
+                                    </div>
+                                    <div><img class="weatherImg " src="images/113.png" alt=""></div>
+                                </div>
+                                <div class="statWeather mb-3">sunny</div>
+                                <div class="todaysunornot"></div>
+                                <div class="weatherSpics d-flex align-items-center justify-content-center mb-0   ">
+                                    <span class=" col"><img src="images/icon-umberella.png" class="me-1"
+                                            alt="">20%</span>
+                                    <span class=" col"><img src="images/icon-wind.png" class="me-1" alt="">18km/h</span>
+                                    <span class="ms-3 col"><img src="images/icon-compass.png" class="me-1"
+                                            alt="">East</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4  ">
+                    <div class="cube mb-0 mb-sm-4  middlediv">
+                        <div class="forcast-Header  d-flex justify-content-center flex-nowrap px-3 py-1">
+                            <p id="day2">The Day Choosen</p>
+                        </div>
+                        <div class="forcast-Content p-3 ">
+                            <div class="degree">
+                                <div class="celsius my-3  d-flex justify-content-center">
+                                    <div class="celNum py-1  flex-column align-items-center">
+                                        <div class="weather-Img  text-center"><img id="weather-Img2"
+                                                src="images/113.png" alt="">
+                                        </div>
+                                        <h2 id="day2degree" class="text-white  mb-0 ">55c</h2>
+                                        <h5 class="text-center pb-3 lowDeg2">33c</h5>
+                                        <div id="status2" class="status mb-3 text-center">sunny</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4   ">
+                    <div class="cube">
+                        <div class="forcast-Header d-flex justify-content-center flex-nowrap px-3 py-1">
+                            <p id="day3">The Day Choosen</p>
+                        </div>
+                        <div class="forcast-Content p-3 ">
+                            <div class="degree">
+                                <div class="celsius my-3  d-flex justify-content-center">
+                                    <div class="celNum py-1  flex-column align-items-center">
+                                        <div class="weather-Img  text-center"><img id="weather-Img3"
+                                                src="images/113.png" alt="">
+                                        </div>
+                                        <h2 id="day3degree" class="text-white  mb-0 ">55c</h2>
+                                        <h5 class="text-center pb-3 lowDeg3">33c</h5>
+                                        <div id="status3" class="status mb-3 text-center">sunny</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container p-4">
+            <div class="row justify-content-between  ">
+                <div class="col-md-8 ">
+                    <form action="" class="search">
+                        <input type="text" value="" placeholder="Enter your Email to Sucscribe..."
+                            class="form-control p-3   ">
+                        <button type="button" value="Sucscribe" class="btnn text-white px-4 py-2 ">Subscribe</button>
+
+                    </form>
+                </div>
+                <div class="col-md-4     mt-2">
+                    <div class="social-media d-flex justify-content-center     ">
+                        <a href="" class="text-decoration-none">
+                            <div class="media mx-1 d-flex justify-content-center align-items-center rounded-circle p-3">
+                                <i class="fa fa-brands fa-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                            <div class="media mx-1 d-flex justify-content-center align-items-center rounded-circle p-3">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                            <div class="media mx-1 d-flex justify-content-center align-items-center rounded-circle p-3">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                            <div class="media mx-1 d-flex justify-content-center align-items-center rounded-circle p-3">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <p class=" mt-4 text-center">Copyright 2023 Company name. Designed by Themezy. All rights
+                    reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

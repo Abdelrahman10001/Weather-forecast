@@ -4,7 +4,7 @@
 $(function () {
   // Get references to DOM elements
   const city = document.querySelector("#city");
-  const cityChosenElements = document.querySelectorAll("#cityChosen");
+  const cityChosen = document.querySelector("#cityChosen");
   const currentDegElement = document.querySelector(".currentDeg");
   const statWeather = document.querySelector(".statWeather");
   const weatherImg = document.querySelector(".weatherImg");
@@ -13,14 +13,14 @@ $(function () {
 
 
 
-  // $(".cube").hide()
+  $(".cube").hide()
 
   // Function to fetch data from the API
   async function fetchData(cityName) {
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=10e33120282c42e0adf83655231908&q=${cityName}&days=7`);
     const data = await response.json();
     
-    // $(".cube").slideDown(1000)
+    $(".cube").slideDown(1000)
     return data;
   }
 
@@ -33,9 +33,10 @@ $(function () {
     const data = await fetchData(cityNNName);
 
     // Update the DOM with fetched data
-    cityChosenElements.forEach((element) => {
-      element.textContent = data.location.name;
-    });
+    
+      cityChosen.textContent = data.location.name;
+      
+    
 
     // Input date in the format "YYYY-MM-DD"
     let inputDate = data.location.localtime;

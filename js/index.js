@@ -20,7 +20,7 @@ $(function () {
     const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=10e33120282c42e0adf83655231908&q=${cityName}&days=7`);
     const data = await response.json();
     
-    $(".cube").slideDown(1000)
+    // $(".cube").slideDown(1000)
     return data;
   }
 

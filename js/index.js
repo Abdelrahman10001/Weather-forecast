@@ -17,20 +17,20 @@ $(function () {
 
   // Function to fetch data from the API
   async function fetchData(cityName) {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=10e33120282c42e0adf83655231908&q=${cityName}&days=7`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=10e33120282c42e0adf83655231908&q=${cityName}&days=7`);
     const data = await response.json();
     
     // $(".cube").slideDown(1000)
     return data;
   }
 
+   // Event listener for the search button click
+   city.addEventListener("input", updateDOM);
+
   // Function to update the DOM with fetched data
   async function updateDOM() {
     const cityNNName = city.value;
     const data = await fetchData(cityNNName);
-
-   
-
 
     // Update the DOM with fetched data
     cityChosenElements.forEach((element) => {
@@ -66,7 +66,7 @@ $(function () {
 
 
     // 1st Day
-    currentDegElement.textContent = data.current.temp_c + "c";
+    currentDegElement.textContent = data.current.temp_c + "°c";
     statWeather.textContent = data.current.condition.text;
     weatherImg.setAttribute('src', data.current.condition.icon)
     // End
@@ -74,8 +74,8 @@ $(function () {
     // 2nd Day
 
     $("#day2").text(nextDayName)
-    $("#day2degree").text(data.forecast.forecastday[1].day.maxtemp_c + "c")
-    $(".lowDeg2").text(data.forecast.forecastday[1].day.mintemp_c + "c")
+    $("#day2degree").text(data.forecast.forecastday[1].day.maxtemp_c + '°c');
+    $(".lowDeg2").text(data.forecast.forecastday[1].day.mintemp_c + "°c")
     $("#status2").text(data.forecast.forecastday[1].day.condition.text)
     $("#weather-Img2").attr('src', data.forecast.forecastday[1].day.condition.icon)
     // End
@@ -83,15 +83,14 @@ $(function () {
     // 3rd Day
 
     $("#day3").text(dayAftertom)
-    $("#day3degree").text(data.forecast.forecastday[2].day.maxtemp_c + "c")
-    $(".lowDeg3").text(data.forecast.forecastday[2].day.mintemp_c + "c")
+    $("#day3degree").text(data.forecast.forecastday[2].day.maxtemp_c + "°c")
+    $(".lowDeg3").text(data.forecast.forecastday[2].day.mintemp_c + "°c")
     $("#status3").text(data.forecast.forecastday[2].day.condition.text)
     $("#weather-Img3").attr('src', data.forecast.forecastday[2].day.condition.icon)
     // End
   }
 
-  // Event listener for the search button click
-  city.addEventListener("input", updateDOM);
+ 
 
  
 
